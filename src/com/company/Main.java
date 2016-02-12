@@ -1,5 +1,7 @@
 package com.company;
 
+import com.company.Sorting.SelectionSort;
+
 import java.io.BufferedReader;
 import java.io.FileInputStream;
 import java.io.IOException;
@@ -11,7 +13,7 @@ public class Main {
 	// write your code here
             String input = null;
 
-        BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+       /* BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
         try {
              input = br.readLine();
         } catch (IOException e) {
@@ -22,7 +24,17 @@ public class Main {
         for(String word:Array){
             System.out.println(word);
         }
+*/
 
+
+        int[] array = {1,5,6,3};
+
+        SelectionSort ss = new SelectionSort(array);
+
+        int[] ssArray = ss.sortDesc();
+        for(int num: ssArray){
+            System.out.printf("%d ",num);
+        }
 
 
 

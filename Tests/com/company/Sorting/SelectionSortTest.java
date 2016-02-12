@@ -28,4 +28,15 @@ public class SelectionSortTest {
             }
         }
     }
+
+    @Test
+    public void isArrayInDescOrder()throws Exception{
+        int[] testArray = ss.sortDesc();
+        for(int counter = 0; counter < Array.getLength(testArray) - 1; counter++) {
+            if (testArray[counter] < testArray[counter + 1]) {
+                throw new IllegalArgumentException();
+            }
+        }
+    }
+
 }

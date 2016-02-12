@@ -40,13 +40,13 @@ public class SelectionSort {
         //is added to the sorted section of the array
         for(int counter1 = 0; counter1 < length - 1; counter1++)
         {
+            //This starts the smallest element' s index as the first element's index in
+            //the unsorted section of the array
+            minIntIndex = counter1;
+
             //Second loop cycles through the unsorted section of the array
             // to find the smallest elements index
             for (int counter2 = counter1 + 1; counter2 < length; counter2++) {
-
-                //This starts the smallest element' s index as the first element's index in
-                //the unsorted section of the array
-                minIntIndex = counter1;
 
                 //Checks if the next sequential element is less then the current minIntIndex
                 if (dataArray[counter2] < dataArray[minIntIndex]) {
@@ -78,15 +78,15 @@ public class SelectionSort {
         //is added to the sorted section of the array
         for(int counter1 = 0; counter1 < length - 1; counter1++)
         {
+            //This starts the largest element's index as the first element's index in
+            //the unsorted section of the array
+            maxIntIndex = counter1;
+
             //Second loop cycles through the unsorted section of the array
             // to find the largest elements index
-            for (int counter2 = counter1 + 1; counter2 < length; counter2++) {
+            for (int counter2 = counter1 + 1; counter2 < length ; counter2++) {
 
-                //This starts the largest element's index as the first element's index in
-                //the unsorted section of the array
-                maxIntIndex = counter1;
-
-                //Checks if the next sequential element is less then the current minIntIndex
+                //Checks if the next sequential element is greater then the current maxIntIndex
                 if (dataArray[counter2] > dataArray[maxIntIndex]) {
 
                     //If this is true the next sequential element's index is now set as the
@@ -100,7 +100,6 @@ public class SelectionSort {
                 tmpInt = dataArray[counter1];
                 dataArray[counter1] = dataArray[maxIntIndex];
                 dataArray[maxIntIndex] = tmpInt;
-
             }
         }
         //The now sorted array is returned
