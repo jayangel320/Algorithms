@@ -36,6 +36,11 @@ public class Main {
             System.out.printf("%d ",num);
         }
 
+//TODO: Add quick sort
+//TODO: Add merge sort
+//TODO: Add heap sort
+//TODO: Add Permutation
+//TODO: Add reverse order method
 
 
 
