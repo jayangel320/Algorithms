@@ -1,5 +1,6 @@
 package com.company;
 
+import com.company.Sorting.InsertionSort;
 import com.company.Sorting.SelectionSort;
 
 import java.io.BufferedReader;
@@ -29,11 +30,12 @@ public class Main {
 
         int[] array = {1,5,6,3};
 
-        SelectionSort ss = new SelectionSort(array);
+        InsertionSort ss = new InsertionSort(array);
 
-        int[] ssArray = ss.sortDesc();
+        int[] ssArray = ss.sortAsc();
+
         for(int num: ssArray){
-            System.out.printf("%d ",num);
+          System.out.printf("%d ",num);
         }
 
 //TODO: Add quick sort
