@@ -26,7 +26,7 @@ public class InsertionSort {
         this.length = Array.getLength(dataArray);
     }
 
-//TODO: Add a sortAsc
+
     public int[] sortAsc(){
         //The number of elements that have been sorted so far
         int numSorted;
@@ -57,18 +57,12 @@ public class InsertionSort {
             // Put the tmpNum in its proper location in the sorted section
             dataArray[counter + 1] = tmpNum;
 
-
-            for(int i = 0; i < length; i++)
-            {
-                System.out.printf("%d ", dataArray[i]);
-            }
-            System.out.println(" ");
         }
         return dataArray;
 
     }
 
-//TODO: Add a lot of description to this
+
     public int[] sortDesc( )
     {
         //The number of elements that have been sorted so far

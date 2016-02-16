@@ -1,6 +1,7 @@
 package com.company;
 
 import com.company.Sorting.InsertionSort;
+import com.company.Sorting.QuickSort;
 import com.company.Sorting.SelectionSort;
 
 import java.io.BufferedReader;
@@ -28,17 +29,6 @@ public class Main {
 */
 
 
-        int[] array = {1,5,6,3};
-
-        InsertionSort ss = new InsertionSort(array);
-
-        int[] ssArray = ss.sortAsc();
-
-        for(int num: ssArray){
-          System.out.printf("%d ",num);
-        }
-
-//TODO: Add quick sort
 //TODO: Add merge sort
 //TODO: Add heap sort
 //TODO: Add Permutation
