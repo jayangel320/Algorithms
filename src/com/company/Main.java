@@ -1,5 +1,6 @@
 package com.company;
 
+import com.company.Reverse.Reverse;
 import com.company.Sorting.InsertionSort;
 import com.company.Sorting.MergeSort;
 import com.company.Sorting.QuickSort;
@@ -17,12 +18,20 @@ public class Main {
 
 
 
-        int[] array1 = {6,5,3,1};
-        int[] array2 = {6,4,2,0};
-        int[] mergeArray = MergeSort.mergeArraysDesc(array1,array2);
+        //int[] array = {1,3,5,6,0,2,4,6};
+        int[] array = {6,4,2,0,6,5,3,1};
+        MergeSort.mergeArraysDesc(array,0,3,7);
 
-        for(int counter = 0; counter < Array.getLength(mergeArray); counter++) {
-            System.out.printf("%d ",mergeArray[counter]);
+        for(int counter = 0; counter < Array.getLength(array); counter++) {
+            System.out.printf("%d ",array[counter]);
+        }
+
+        System.out.println("");
+
+        int[] array2 = {1,4,5,6,7,8,9};
+        Reverse.Reverse(array2);
+        for(int counter = 0; counter < Array.getLength(array2); counter++) {
+            System.out.printf("%d ",array2[counter]);
         }
 
         System.out.println("");
