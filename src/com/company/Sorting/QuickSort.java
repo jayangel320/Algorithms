@@ -3,6 +3,26 @@ package com.company.Sorting;
 /**
  * Created by jaybob320 on 2/16/16.
  */
+
+
+
+
+/*---------------------------------------------------------------------------------/
+ * The quick sort method starts with you choosing a pivot element in an array. The
+ * pivot is usually chosen to be one of the elements in the center of the array.
+ * Then the elements to the left and right of the pivot are examined. For the sake of
+ * explanation this will be quick sort to ascending order. The elements to the left
+ * are cycled through from left to right and compared to the pivot. As soon as one
+ * that is greater than the pivot its index is saved. The same is done for elements
+ * to the right except that they are checked to be less than the pivot. Once a right
+ * and left element are found they are switched. This is repeated until the all elements
+ * to the left of the pivot are less than the pivot and all greater to the right. One
+ * thing to notice is that the pivot itself can be moved around because in the end
+ * the pivot would have to be in its final location in the array. After this is done
+ * the array is split into two, unless the pivot was the smallest or largest element
+ * then only one, arrays and the method is called recursively on these smaller sections
+ * until the entire array is sorted.
+ /--------------------------------------------------------------------------------*/
 public class QuickSort {
 
 
