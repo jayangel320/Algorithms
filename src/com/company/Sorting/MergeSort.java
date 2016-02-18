@@ -10,20 +10,30 @@ public class MergeSort {
 
 
     public static void sortAsc(int[] array){
-        mergeSortAsc(array,0 ,array.length -1);
+        mergeSortAsc(array, 0, array.length -1);
     }
 
 
 
-    public static void mergeSortAsc(int[] array, int arrayBegin, int arrayEnd){
-        if(arrayBegin == arrayEnd){
+    public static void mergeSortAsc(int[] array, int start, int end){
+        if(start == end){
             return;
         }
 
-        int middle = (arrayEnd - arrayBegin) / 2;
+        int middle = (end - start) / 2;
 
-        mergeSortAsc(array, arrayBegin, middle);
-        mergeSortAsc(array, middle + 1, arrayEnd);
+        System.out.printf("%d %d %d %n",start,middle,end);
+
+
+
+        mergeSortAsc(array, start, middle);
+
+
+        mergeSortAsc(array, middle + 1, end);
+
+        System.exit(0);
+
+        mergeArraysAsc(array,start,middle,end);
 
     }
 
@@ -38,8 +48,10 @@ public class MergeSort {
         //copy first section to new array
         int[] array1 = Arrays.copyOfRange(array, start,middle+1);
 
+
         //copy second section to new array
         int[] array2 = Arrays.copyOfRange(array,middle+1,end+1);
+
 
         //counter for array 1
         int counter1 = 0;
@@ -52,7 +64,17 @@ public class MergeSort {
 
         while(counter3 < end){
 
-            if(counter1 == array1.length){
+            if(array1.length == 1 && array2.length == 1){
+                if(array1[counter1] < array2[counter2]){
+                    array[counter3++] = array1[counter1];
+                    array[counter3++] = array2[counter2];
+                }
+                else{
+                    array[counter3++] = array2[counter2];
+                    array[counter3++] = array1[counter1];
+                }
+            }
+            else if(counter1 == array1.length){
                 array[counter3++] = array2[counter2];
                 if(counter2 < array2.length){
                     counter2++;

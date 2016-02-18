@@ -5,6 +5,7 @@ import com.company.Sorting.InsertionSort;
 import com.company.Sorting.MergeSort;
 import com.company.Sorting.QuickSort;
 import com.company.Sorting.SelectionSort;
+import com.sun.scenario.effect.Merge;
 
 import java.io.BufferedReader;
 import java.io.FileInputStream;
@@ -18,23 +19,26 @@ public class Main {
 
 
 
-        //int[] array = {1,3,5,6,0,2,4,6};
-        int[] array = {6,4,2,0,6,5,3,1};
-        MergeSort.mergeArraysDesc(array,0,3,7);
+//        int[] array = {1,4,5,6,7,8,9};
+//
+//        MergeSort.sortAsc(array);
+//
+//
+//        for(int counter = 0; counter < Array.getLength(array); counter++) {
+//            System.out.printf("%d ",array[counter]);
+//        }
+//
+//        System.out.println("");
 
-        for(int counter = 0; counter < Array.getLength(array); counter++) {
-            System.out.printf("%d ",array[counter]);
-        }
+        int[] num = {5,2,4,5};
+
+        MergeSort.sortAsc(num);
 
         System.out.println("");
+        System.out.printf("%d ", num[0]);
+        System.out.printf("%d", num[1]);
 
-        int[] array2 = {1,4,5,6,7,8,9};
-        Reverse.Reverse(array2);
-        for(int counter = 0; counter < Array.getLength(array2); counter++) {
-            System.out.printf("%d ",array2[counter]);
-        }
 
-        System.out.println("");
 
 
 //TODO: Add heap sort
